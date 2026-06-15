@@ -4,154 +4,222 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CV | Maria da Glória Salgado Gonçalves</title>
+<title>CV Académico | Maria da Glória Salgado Gonçalves</title>
 
 <style>
 body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f6f8;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #eef2f7;
     color: #222;
 }
 
-/* CABEÇALHO AZUL */
+/* ===== HEADER ===== */
 .header {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: linear-gradient(135deg, #0f2c59, #1f4b99);
     color: white;
+    padding: 60px 20px 30px;
     text-align: center;
-    padding: 50px 20px 30px;
 }
 
 .header img {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    object-fit: cover;
     border: 4px solid white;
+    object-fit: cover;
     margin-bottom: 15px;
 }
 
 .header h1 {
     margin: 10px 0 5px;
-    font-size: 30px;
+    font-size: 32px;
+}
+
+.header h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.95;
 }
 
 .header p {
     margin: 5px 0;
-    font-size: 15px;
-    opacity: 0.95;
+    font-size: 14px;
+    opacity: 0.9;
 }
 
-.badge {
+.tag {
     display: inline-block;
-    margin-top: 10px;
-    padding: 5px 12px;
-    background: rgba(255,255,255,0.2);
+    margin-top: 12px;
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.15);
     border-radius: 20px;
     font-size: 13px;
 }
 
-/* CONTEÚDO */
+/* ===== LAYOUT ===== */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
-    background: white;
-    padding: 40px;
+    padding: 30px;
 }
 
-h2 {
-    color: #1e3c72;
-    border-left: 5px solid #2a5298;
-    padding-left: 10px;
-    margin-top: 35px;
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
+/* ===== CARDS ===== */
 .card {
-    background: #fafafa;
-    padding: 15px 20px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    margin-top: 10px;
+    background: white;
+    border-radius: 10px;
+    padding: 18px 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #1f4b99;
 }
 
+h3 {
+    color: #1f4b99;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+/* ===== FULL WIDTH ===== */
+.full {
+    grid-column: 1 / -1;
+}
+
+/* ===== LISTS ===== */
 ul {
-    padding-left: 20px;
     margin: 0;
+    padding-left: 20px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- CABEÇALHO AZUL -->
+<!-- HEADER -->
 <div class="header">
-    <img src="200305541.jpg" alt="Foto de perfil">
+    <img src="200305541.jpg" alt="Foto">
 
     <h1>Maria da Glória Salgado Gonçalves</h1>
+    <h2>Doutorada em Sustentabilidade Social e Desenvolvimento</h2>
 
-    <p>Doutorada em Sustentabilidade Social e Desenvolvimento</p>
     <p>📧 goncalves.gloria@gmail.com | ORCID: 0000-0003-3627-5404</p>
 
-    <div class="badge">
-        Investigadora | Risco Ambiental | Ciência de Dados | Geografia Física
+    <div class="tag">
+        Investigação em Risco Ambiental | Geografia Física | Data Science | Políticas Públicas
     </div>
 </div>
 
-<!-- CONTEÚDO -->
+<!-- CONTAINER -->
 <div class="container">
 
-<h2>Formação Académica</h2>
+<div class="grid">
+
+<!-- PERFIL -->
 <div class="card">
+<h3>Perfil Científico</h3>
+<p>
+Investigadora especializada em risco ambiental, hidrologia e análise de vulnerabilidade territorial.
+Trabalha na interseção entre geografia física, estatística aplicada e ciência de dados.
+</p>
+</div>
+
+<!-- FORMAÇÃO -->
+<div class="card">
+<h3>Formação Académica</h3>
 <ul>
-<li>Doutoramento – Universidade Aberta (2018)</li>
+<li>Doutoramento – Univ. Aberta (2018)</li>
 <li>Mestrado em Geografia – FLUP (2009)</li>
-<li>Mestrado em Ciência de Dados – FCUP (2021)</li>
-<li>Licenciatura em Engenharia do Ambiente (2002)</li>
+<li>Mestrado em Data Science – FCUP (2021)</li>
+<li>Licenciatura – Engenharia do Ambiente (2002)</li>
 </ul>
 </div>
 
-<h2>Investigação</h2>
-<div class="card">
+<!-- EXPERIÊNCIA -->
+<div class="card full">
+<h3>Experiência de Investigação</h3>
 <ul>
 <li>Centro de Estudos Geográficos – Universidade de Lisboa (2014–2024)</li>
-<li>Risco de cheias e modelação estatística</li>
-<li>Sustentabilidade e políticas ambientais</li>
+<li>Investigação em riscos naturais, cheias e ordenamento do território</li>
+<li>Desenvolvimento de modelos estatísticos aplicados a eventos extremos</li>
+<li>Coordenação de análise espacial e dados ambientais</li>
 </ul>
 </div>
 
-<h2>Publicações Selecionadas</h2>
+<!-- PROJETOS -->
 <div class="card">
+<h3>Projetos Científicos</h3>
 <ul>
-<li>Flood risk and sustainability (2023)</li>
-<li>Digital flood records (2022)</li>
-<li>Modelação de cheias no rio Vez (2019–2020)</li>
+<li>Modelação de cheias no rio Vez</li>
+<li>Cartografia de risco hidrológico</li>
+<li>Sustentabilidade e políticas de prevenção</li>
 </ul>
 </div>
 
-<h2>Competências</h2>
+<!-- COMPETÊNCIAS -->
 <div class="card">
+<h3>Competências Técnicas</h3>
 <ul>
-<li>Python | R | SPSS</li>
+<li>Python, R, SPSS</li>
 <li>Machine Learning</li>
-<li>GIS / SIG</li>
+<li>SIG / GIS</li>
 <li>Modelação estatística</li>
 </ul>
 </div>
 
-<h2>Prémios</h2>
+<!-- PUBLICAÇÕES -->
+<div class="card full">
+<h3>Publicações Científicas</h3>
+<ul>
+<li>Flood risk and sustainability studies (2023)</li>
+<li>Digital flood records and environmental policy (2022)</li>
+<li>Modelação estatística das cheias no rio Vez (2019–2020)</li>
+<li>Políticas de mitigação de risco hidrológico (2019)</li>
+</ul>
+</div>
+
+<!-- PRÉMIOS -->
 <div class="card">
+<h3>Prémios & Reconhecimento</h3>
 <ul>
 <li>Prémio de Mérito Académico (2019)</li>
 <li>Born from Knowledge – Web Summit (2016)</li>
 </ul>
 </div>
 
-<h2>Biografia</h2>
+<!-- ATIVIDADE ACADÉMICA -->
 <div class="card">
+<h3>Atividade Científica</h3>
+<ul>
+<li>Revisão de artigos internacionais</li>
+<li>Participação em conferências científicas</li>
+<li>Colaboração em projetos interdisciplinares</li>
+</ul>
+</div>
+
+<!-- BIO -->
+<div class="card full">
+<h3>Biografia Académica</h3>
 <p>
-Investigadora em risco ambiental, sustentabilidade e ciência de dados aplicada a sistemas naturais.
-Trabalha na interface entre geografia física, estatística e políticas públicas.
+Investigadora dedicada ao estudo de sistemas ambientais complexos, com foco em riscos naturais,
+resiliência territorial e sustentabilidade. A sua investigação integra metodologias quantitativas,
+análise espacial e modelação estatística aplicada a fenómenos hidrológicos.
 </p>
+</div>
+
 </div>
 
 </div>
